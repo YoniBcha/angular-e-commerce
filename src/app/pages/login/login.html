@@ -3,10 +3,16 @@
     <img src="Paste_image-removebg-preview.png" alt="Logo" />
   </div>
   <div class="login-rightside">
-    <h2>Sign In</h2>
-    <p>Don’t have an accout yet? <span href="/login">Sign Up</span></p>
-    <input [(ngModel)]="username" placeholder="username" />
-    <input [(ngModel)]="password" type="password" placeholder="password" />
-    <app-button label="Login" (click)="login()"></app-button>
+    <div class="">
+      <div>Sign In</div>
+      <p>Don’t have an account yet? <a routerLink="/signup">Sign Up</a></p>
+      <div class="">
+        <app-input type="text" placeholder="Username" [(value)]="username"></app-input>
+        <app-input type="password" placeholder="Password" [(value)]="password"></app-input>
+      </div>
+      <!-- <input [(ngModel)]="username" placeholder="username" />
+      <input [(ngModel)]="password" type="password" placeholder="password" /> -->
+      <app-button label="Login" (click)="login()"></app-button>
+    </div>
   </div>
 </div>

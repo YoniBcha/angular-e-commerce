@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 .login-container {
   display: flex;
   position: fixed;
@@ -5,15 +7,6 @@
   left: 0;
   width: 100%;
   height: 100vh;
-}
-
-.login-container .login-leftside img {
-  max-width: 180%;
-  height: 100%;
-}
-
-.login-container .login-rightside h2 {
-  font-size: 50px;
 }
 
 .login-leftside {
@@ -24,11 +17,33 @@
   align-items: center;
 }
 
+.login-container .login-leftside img {
+  max-width: 180%;
+  height: 100%;
+}
+
 .login-rightside {
   flex: 1;
+  padding-left: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
-  gap: 10px;
+  align-items: start;
+}
+
+.login-rightside p a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  color: $highlight-color;
+}
+
+.login-container .login-rightside div {
+  font-size: 50px;
+}
+
+.login-container .login-rightside p {
+  color: $text-color;
+  font-size: 16px;
 }
