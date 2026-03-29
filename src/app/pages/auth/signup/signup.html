@@ -1,0 +1,30 @@
+<app-auth-layout>
+  <div class="signup-form">
+    <div class="title">Sign Up</div>
+
+    <p>
+      Already have an account?
+      <a routerLink="/login">Sign in</a>
+    </p>
+
+    <app-input placeholder="Full Name" [(value)]="name"></app-input>
+
+    <app-input placeholder="Username" [(value)]="username"></app-input>
+
+    <app-input type="email" placeholder="Email" [(value)]="email"></app-input>
+
+    <app-input type="password" placeholder="Password" [(value)]="password"></app-input>
+
+    <div class="terms">
+      <input type="checkbox" [(ngModel)]="agree" />
+      <span>
+        I agree with
+        <a href="#">Privacy Policy</a>
+        and
+        <a href="#">Terms of Use</a>
+      </span>
+    </div>
+
+    <app-button label="Sign Up" (onClick)="signup()"></app-button>
+  </div>
+</app-auth-layout>
