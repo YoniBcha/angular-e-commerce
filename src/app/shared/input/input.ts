@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./input.scss'],
 })
 export class InputComponent {
-  @Input() type: string = 'text'; // text, password, email...
+  @Input() type: string = 'text';
   @Input() placeholder: string = '';
   @Input() value: string = '';
   @Input() disabled: boolean = false;

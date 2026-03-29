@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../core/services/auth';
-import { Button } from '../../shared/button/button';
-import { InputComponent } from '../../shared/input/input';
+import { AuthService } from '../../../core/services/auth';
+import { Button } from '../../../shared/button/button';
+import { InputComponent } from '../../../shared/input/input';
 
 @Component({
   selector: 'app-login',
