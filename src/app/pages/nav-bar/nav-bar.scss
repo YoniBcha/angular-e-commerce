@@ -1,0 +1,35 @@
+main {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container .nav-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-container .nav-links ul li {
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-container .icons {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .nav-container .nav-links ul {
+    display: none;
+  }
+}
