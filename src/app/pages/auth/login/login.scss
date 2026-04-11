@@ -1,15 +1,35 @@
 @import '../../../../styles.scss';
 
 .login-container {
-  gap: 15px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container .form-container {
   display: flex;
   flex-direction: column;
+  gap: 1px;
+}
+
+// .login-container .form-container .form-layout {
+//   gap: 20px;
+// }
+
+.login-container .form-container .button {
+  margin-top: 20px;
 }
 
 .login-container .title {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 600;
+}
+
+.login-container p {
+  font-size: 15px;
+  color: $text-color;
 }
 
 .login-container p span {
@@ -20,7 +40,18 @@
   color: $highlight-color;
 }
 
-.login-container p {
-  font-size: 15px;
-  color: $text-color;
+@media (max-width: 500px) {
+  .login-container p {
+    font-size: 12px;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .login-container p span {
+    font-size: 14px;
+  }
 }

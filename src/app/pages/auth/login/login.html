@@ -1,15 +1,18 @@
 <app-auth-layout>
   <div class="login-container">
-    <div class="title">Sign In</div>
+    <div class="form-container">
+      <div class="title">Sign In</div>
 
-    <p>
-      Don’t have an account yet?
-      <span routerLink="/signup">Sign Up</span>
-    </p>
+      <p>
+        Don’t have an account yet?
+        <span routerLink="/signup">Sign Up</span>
+      </p>
 
-    <app-input type="text" placeholder="Username" [(value)]="username"></app-input>
-
-    <app-input type="password" placeholder="Password" [(value)]="password"></app-input>
-    <app-button class="button" label="Login" (click)="login()"></app-button>
+      <div class="form-layout">
+        <app-input type="email" placeholder="Username" [(value)]="username"></app-input>
+        <app-input type="password" placeholder="Password" [(value)]="password"></app-input>
+      </div>
+      <app-button class="button" label="Login" (click)="login()"></app-button>
+    </div>
   </div>
 </app-auth-layout>

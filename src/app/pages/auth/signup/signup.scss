@@ -1,38 +1,83 @@
 @import '../../../../styles.scss';
 
-.signup-form {
+.signup-container {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.signup-form .title {
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 600;
 }
 
-.signup-form p {
+.form-container p {
   font-size: 15px;
   color: $text-color;
 }
 
-.signup-form p span {
+.form-container p span,
+.link {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
   cursor: pointer;
   color: $highlight-color;
 }
 
-.signup-form .terms {
-  font-size: 14px;
-  color: $text-color;
+.form-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.signup-form .terms span span {
-  font-weight: 400;
-  font-size: 13px;
+.terms {
+  width: 100%;
+  font-size: 14px;
   color: $text-color;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.terms span {
+  font-size: 13px;
   color: black;
+}
+
+.button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signup-container {
+    padding: 15px;
+  }
+
+  .form-container {
+    max-width: 100%;
+  }
+
+  .form-container p {
+    font-size: 13px;
+  }
+
+  .link {
+    font-size: 13px;
+  }
 }

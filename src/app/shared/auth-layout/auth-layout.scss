@@ -1,17 +1,22 @@
 .auth-container {
   display: flex;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: scroll;
 }
 
-.auth-leftside {
+.auth-container .auth-leftside {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f5f5f5;
-  
+
   img {
-    width: 500px;
+    width: 100%;
     height: auto;
   }
 }
@@ -21,4 +26,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 500px) {
+  .auth-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .auth-container .auth-leftside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
 }

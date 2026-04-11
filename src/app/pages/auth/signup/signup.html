@@ -1,30 +1,34 @@
 <app-auth-layout>
-  <div class="signup-form">
-    <div class="title">Sign Up</div>
+  <div class="signup-container">
+    <div class="form-container">
+      <div class="title">Sign Up</div>
 
-    <p>
-      Already have an account?
-      <span routerLink="/login">Sign in</span>
-    </p>
+      <p>
+        Already have an account?
+        <span routerLink="/login">Sign in</span>
+      </p>
 
-    <app-input placeholder="Full Name" [(value)]="name"></app-input>
+      <div class="form-layout">
+        <app-input placeholder="Full Name" [(value)]="name"></app-input>
 
-    <app-input placeholder="Username" [(value)]="username"></app-input>
+        <app-input placeholder="Username" [(value)]="username"></app-input>
 
-    <app-input type="email" placeholder="Email" [(value)]="email"></app-input>
+        <app-input type="email" placeholder="Email" [(value)]="email"></app-input>
 
-    <app-input type="password" placeholder="Password" [(value)]="password"></app-input>
+        <app-input type="password" placeholder="Password" [(value)]="password"></app-input>
+      </div>
 
-    <div class="terms">
-      <input type="checkbox" [(ngModel)]="agree" />
-      <span>
-        I agree with
-        <span href="#">Privacy Policy</span>
-        and
-        <span href="#">Terms of Use</span>
-      </span>
+      <div class="terms">
+        <input type="checkbox" [(ngModel)]="agree" />
+        <div>
+          I agree with
+          <span class="link">Privacy Policy</span>
+          and
+          <span class="link">Terms of Use</span>
+        </div>
+      </div>
+
+      <app-button class="button" label="Sign Up" (onClick)="signup()"></app-button>
     </div>
-
-    <app-button label="Sign Up" (onClick)="signup()"></app-button>
   </div>
 </app-auth-layout>
