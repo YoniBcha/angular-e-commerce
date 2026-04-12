@@ -1,11 +1,29 @@
-<div class="slider">
-  <div class="slides" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
-    <div class="slide" *ngFor="let img of images">
-      <img [src]="img" alt="slider image" />
+<div
+  class="slider"
+  (mouseenter)="pause()"
+  (mouseleave)="startAutoSlide()"
+>
+  <div
+    class="slides"
+    [class.no-transition]="noTransition"
+    [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+    (transitionend)="onTransitionEnd()"
+  >
+    <div class="slide" *ngFor="let img of extendedImages">
+      <img [src]="img" />
     </div>
   </div>
 
-  <!-- Navigation -->
+  <!-- NAV -->
   <button class="nav prev" (click)="prev()">❮</button>
   <button class="nav next" (click)="next()">❯</button>
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <span
+      *ngFor="let img of images; let i = index"
+      [class.active]="i === realIndex"
+      (click)="goTo(i)"
+    ></span>
+  </div>
 </div>
